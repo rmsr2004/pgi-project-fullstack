@@ -1,0 +1,1254 @@
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+  /* Ajuste conforme a altura da sua navbar */
+}
+
+/* Navbar styling */
+.hero__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  padding: 20px 100px;
+  color: white;
+  background-color: white;
+  /* Deixe transparente se necessário */
+  position: fixed;
+  /* Fixa a navbar no topo da página */
+  top: -10px;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Opcional: adiciona uma leve sombra */
+  border-radius: 700px;
+}
+
+/* Centering the .hero container */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 80px;
+  /* Espaço para a navbar fixa */
+  margin: 0;
+}
+
+/* Hero section styling */
+.hero {
+  width: 90%;
+  height: 80vh;
+  /* Aumente a altura da seção hero */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+/* Background container */
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.hero__nav .logo img {
+  width: 300px;
+
+}
+
+nav a {
+  width: 0%;
+}
+
+span {
+  color: #000000;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  /* Adicione esta linha para garantir a mesma fonte */
+}
+
+nav ul li a:hover {
+  color: #000000;
+  transition: .3s;
+}
+
+button {
+  border: none;
+  background: #000000;
+  padding: 12px 30px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .4s;
+}
+
+button:hover {
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+
+
+/* Main content styles */
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 120px;
+  height: 70vh;
+  z-index: 1;
+  margin-top: 200px;
+  width: 80%;
+  max-width: 1300px;
+  padding-right: 50px;
+  padding-left: 0px;
+  margin-bottom: 100px;
+  margin-left: 0px;
+}
+
+.main__content {
+  color: #fff;
+  width: 100%;
+}
+
+.main__content h1 {
+  font-size: 3rem;
+  background-color: #c9a9a4;
+  background-size: 100%;
+  white-space: nowrap;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  background-size: 100%;
+  text-align: left;
+  line-height: 1.3;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Button styles */
+.main__btn.primary {
+  background-color: #c9a9a4;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main__btn.primary:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #c9a9a4;
+}
+
+.main__btn.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 15px 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.main__btn.secondary:hover {
+  background-color: white;
+  color: black;
+}
+
+.main__btn.secondary::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff7b47;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  transition: all 0.3s ease;
+}
+
+.main__btn.secondary:hover::after {
+  right: 15px;
+}
+
+
+/* About section styling */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  height: 50vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: row-reverse;
+  /* Inverte a ordem dos elementos */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  /* Centraliza o container */
+}
+
+.about__image {
+  flex: 1;
+  padding-left: 20px;
+  /* Espaçamento à esquerda da imagem */
+}
+
+.about__image img {
+  width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about__content {
+  flex: 1;
+  padding-right: 0px;
+  /* Espaçamento à direita do texto */
+}
+
+.about__content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about__content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+  margin-left: -200px;
+  margin-right: 50px;
+}
+
+.about__content button {
+  padding: 10px 20px;
+  background-color: #c9a9a4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.about__content button:hover {
+  background-color: #a98580;
+}
+
+.about__content button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  .about h1 {
+    text-align: center;
+  }
+
+  .about__container {
+    flex-direction: column;
+    /* Faz com que os elementos fiquem empilhados verticalmente */
+    align-items: center;
+    /* Centraliza o conteúdo */
+  }
+
+  .about__image {
+    display: none;
+    /* Oculta a imagem */
+  }
+
+  .about__content {
+    text-align: center;
+    /* Centraliza o texto */
+    margin-right: 0;
+    padding: 0 20px;
+    /* Adiciona um pouco de padding ao redor do texto */
+  }
+
+  .about__content h2 {
+    font-size: 1.8rem;
+    /* Ajuste do tamanho da fonte para telas menores */
+  }
+
+  .about__content p {
+    font-size: 1rem;
+    /* Ajuste do tamanho da fonte para telas menores */
+    margin-left: 0;
+    /* Garante que não haverá deslocamento */
+    margin-right: 0;
+    /* Remove a margem da direita */
+    text-align: justify;
+    /* Justifica o texto */
+  }
+}
+
+/* Contêiner que organiza os fluxos lado a lado */
+.flows-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  /* Espaço uniforme entre os fluxos */
+  gap: 30px;
+  /* Espaçamento entre os fluxos */
+  align-items: flex-start;
+  /* Alinha os fluxos no topo */
+  flex-wrap: wrap;
+  /* Garante que em telas pequenas o layout ainda se ajuste */
+  margin-top: 40px;
+  /* Espaço entre os fluxos e o conteúdo acima */
+}
+
+/* Fluxo Container */
+.flow-container {
+  display: flex;
+  flex-direction: column;
+  /* Mantém os passos empilhados verticalmente */
+  align-items: center;
+  /* Centraliza os itens no centro */
+  justify-content: center;
+  width: 45%;
+  /* Controla o tamanho do fluxo (50% para cada lado) */
+  min-width: 280px;
+  /* Garante que o fluxo não fique muito pequeno em telas menores */
+}
+
+/* Estilos para cada passo do fluxo */
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  /* Coloca o número e o texto um em cima do outro */
+  align-items: center;
+  margin: 0 20px;
+  /* Espaçamento entre os passos */
+}
+
+@media (max-width: 768px) {
+  .flow-container {
+    margin-top: 150px;
+    width: 100%;
+    /* Ocupa toda a largura em telas menores */
+  }
+}
+
+.step-number {
+  background-color: #c9a9a4;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* Torna o número redondo */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.flow-step p {
+  font-size: 1rem;
+  text-align: center;
+  /* Alinha o texto no centro */
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilo das setas */
+.arrow {
+  font-size: 2rem;
+  /* Tamanho das setas */
+  color: #333;
+  margin: 0 10px;
+  /* Espaçamento entre as setas e os passos */
+}
+
+/* Estilos para os Títulos dos Fluxos */
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+/* Sidebar styles */
+.sidebar {
+  width: 100%;
+  /* A largura ocupa toda a tela */
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  /* Alinha no topo da página */
+  left: 0;
+  background-color: white;
+  overflow-y: hidden;
+  /* Evita rolagem no início */
+  transition: max-height 1s ease;
+  /* Transição mais suave */
+  max-height: 0;
+  /* Inicialmente, a sidebar começa com altura 0 */
+  padding-top: 20px;
+  /* Espaço no topo para os links */
+  border-radius: 10px;
+
+  display: flex;
+  /* Usando flexbox */
+  flex-direction: column;
+  /* Alinha os itens na vertical */
+  justify-content: center;
+  /* Centraliza os itens verticalmente */
+  align-items: center;
+  /* Centraliza os itens horizontalmente */
+  text-align: center;
+  /* Garante que o texto dos links também fique centralizado */
+}
+
+/* Os links da sidebar */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.sidebar button {
+
+  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+
+}
+
+.sidebar .logo img {
+  margin-top: -100px;
+  margin-bottom: -50px;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Botão de abrir/fechar (no topo da página) */
+#sidebarToggle {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  display: block;
+  /* O botão aparece inicialmente */
+  background: none;
+  border: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 101;
+
+}
+
+/* Quando a sidebar estiver aberta, ajusta o max-height para a altura do conteúdo */
+.sidebar.open {
+  max-height: 500px;
+  /* Ajuste para a altura necessária para o conteúdo */
+  overflow-y: auto;
+  /* Permite rolagem se o conteúdo for maior que o máximo */
+}
+
+/* Esconde o botão de abrir/fechar quando a sidebar estiver ativa */
+.sidebar.open~#sidebarToggle {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: none;
+    /* Oculta a sidebar em telas grandes */
+  }
+
+  .sidebar .closebtn {
+    display: none;
+    /* Oculta o botão de fechar a sidebar em telas grandes */
+  }
+
+  #sidebarToggle {
+    display: none;
+    /* Oculta o botão de abrir a sidebar em telas grandes */
+  }
+}
+
+
+
+/* Ajuste de responsividade */
+@media screen and (max-width: 768px) {
+  .hero__nav {
+    padding: 40px 20px;
+  }
+
+  .hero__nav ul {
+    display: none;
+    /* Oculta a navbar horizontal em telas pequenas */
+  }
+
+  #sidebarToggle {
+    display: block;
+    /* Exibe o botão de toggle da sidebar */
+  }
+
+  .hero__nav .logo img {
+    width: 180px;
+    /* Altere o tamanho do logo conforme necessário */
+    height: auto;
+    /* Garante que a proporção da imagem seja mantida */
+    display: flex;
+    margin-left: 70px;
+  }
+
+  .hero__nav button {
+    display: none;
+    /* Remove o botão de login em telas pequenas */
+  }
+
+  .hero {
+    height: 100vh;
+    /* Aumenta a altura da seção hero */
+    margin-top: 0px;
+  }
+
+
+  .main__content h1 {
+    text-wrap: wrap;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    /* Espaço entre o título e o subtítulo */
+    margin-left: 50px;
+  }
+
+  .main__content h2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    /* Espaço entre o subtítulo e o botão */
+    margin-left: 50px;
+    text-align: justify;
+  }
+
+  /* Button styles */
+  .main__btn.primary {
+    width: 200px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    margin-left: 50px;
+    display: block;
+    text-align: center;
+  }
+
+  .main__btn.secondary {
+    width: 200px;
+    padding: 10px 30px;
+    font-size: 0.8rem;
+    margin-left: 50px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+
+  }
+
+
+  .about__content p {
+    font-size: 1rem;
+    /* Reduz o tamanho do texto */
+  }
+}
+
+
+
+form {
+  max-width: 1980px;
+  width: 100%;
+  margin-top: px;
+}
+
+form .container {
+  width: 80%;
+  margin-inline: auto;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(80, 80, 80, 0.30);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 100px;
+  gap: 2rem;
+  border-radius: 0.6rem;
+}
+
+.input {
+  flex-basis: 22%;
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.3px solid rgba(80, 80, 80, .30);
+  padding: 0.5rem 0;
+  border-radius: 5px;
+}
+
+.input input {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 1rem;
+
+}
+
+.search {
+  background-color: #505050;
+  flex-basis: 15%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 300ms;
+
+}
+
+.search>* {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+
+.search:hover {
+  opacity: 0.8;
+}
+
+
+/* product  */
+#product {
+  width: 100%;
+  max-width: 1980px;
+  padding-block: 4rem;
+}
+
+.product-info {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.product-info .product-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #505050;
+  width: 70%;
+}
+
+.product-btn {
+  background-color: transparent;
+  color: #505050;
+  font-size: 1.5rem;
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  min-height: 20px;
+  transition: color 300ms;
+}
+
+.product-btn:hover {
+  color: #000;
+}
+
+#product .container {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-card {
+  flex-basis: 28%;
+  /* background-color: royalblue; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  /* border: 0.5px solid rgba(80, 80, 80, 0.30); */
+  box-shadow: 0px 5px 10px rgba(80, 80, 80, 0.20);
+  padding-bottom: 1rem;
+  overflow: hidden;
+
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.035);
+}
+
+.product-img {
+  flex-basis: 100%;
+  object-fit: cover;
+  transition: 300ms ease;
+}
+
+.card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  /* background-color: red; */
+  width: 100%;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.card-info-content {
+  display: flex;
+  text-transform: uppercase;
+  min-height: 20px;
+  justify-self: center;
+  align-items: center;
+  gap: 0.5rem;
+  /* background-color: yellow; */
+  width: 90%;
+  margin-inline: auto;
+
+}
+
+.content {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: start;
+  min-height: 20px;
+  align-items: center;
+}
+
+.content p {
+  font-size: 1rem;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-inline: auto;
+
+  gap: 10px;
+
+}
+
+.price p {
+  font-size: 1.5rem;
+  flex-basis: 30%;
+
+}
+
+.booking-btn {
+  color: #fff;
+  background-color: #505050;
+  flex-basis: 50%;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Benefits */
+.benefits-section {
+  text-align: center;
+  margin: 40px 20px;
+  /* Aumenta o espaço ao redor da seção de benefícios */
+}
+
+.benefits-section h1 {
+  margin-bottom: 40px;
+  /* Aumenta o espaçamento abaixo do título */
+}
+
+.benefits-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* Aumenta o espaçamento entre os benefícios */
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  /* Adiciona um espaço abaixo da lista de benefícios */
+}
+
+.benefits-section button {
+  margin-top: 20px;
+  /* Espaço entre os benefícios e o botão */
+  padding: 15px 30px;
+  /* Aumenta o tamanho do botão */
+  font-size: 18px;
+  /* Aumenta o tamanho da fonte do botão */
+  color: white;
+  background-color: #c9a9a4;
+  border: none;
+  border-radius: 8px;
+  /* Deixa o botão com cantos mais arredondados */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.benefits-section button:hover {
+  background-color: #c9a9a4;
+  transition: 0.5s;
+}
+
+.benefit-item {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  /* Cantos mais arredondados para os itens de benefício */
+  padding: 30px;
+  /* Aumenta o padding dentro do benefício */
+  width: 300px;
+  /* Aumenta a largura dos itens de benefício */
+  text-align: center;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  /* Melhora o sombreamento */
+  transition: transform 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 200px;
+}
+
+.benefit-item:hover {
+  transform: scale(1.08);
+  /* Aumenta um pouco mais o efeito de zoom ao passar o mouse */
+}
+
+.benefit-item h3 {
+  margin-bottom: 15px;
+  /* Aumenta o espaçamento abaixo do título */
+  color: #333;
+  font-size: 24px;
+  /* Aumenta o tamanho da fonte do título */
+}
+
+.benefit-item p {
+  color: #555;
+  font-size: 16px;
+  /* Aumenta o tamanho da fonte da descrição */
+  line-height: 1.6;
+  /* Aumenta o espaçamento entre as linhas */
+}
+
+/* Rodapé */
+.footer {
+  display: flex;
+  /* Disposição horizontal */
+  justify-content: space-between;
+  /* Espaçamento entre as seções */
+  align-items: flex-start;
+  /* Alinhamento no topo */
+  width: 100%;
+  /* Ocupa toda a largura da página */
+  background-color: #000;
+  /* Fundo preto */
+  color: #fff;
+  /* Texto branco */
+  padding: 20px 10%;
+  /* Espaçamento interno */
+  box-sizing: border-box;
+  /* Inclui padding no cálculo do tamanho */
+  margin-top: 10%;
+}
+
+/* Estilização das seções */
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+  /* Cada seção ocupa a mesma largura */
+  margin: 0 10px;
+  /* Margem horizontal entre as seções */
+}
+
+/* Títulos */
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Links */
+.footer a {
+  color: #1e90ff;
+  /* Azul claro para links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  /* Sublinha ao passar o mouse */
+}
+
+
+/* Estilos para o formulário no final da página */
+#formContainer {
+  background-color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  scroll-margin-top: 100px;
+}
+
+/* Estilo do título */
+#formContainer h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#formContainer h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+#formContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilos de campos do formulário */
+#formContainer form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+#formContainer form input,
+#formContainer form select {
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Botão de envio */
+#formContainer form button.main__btn.primary {
+  background-color: #c9a9a4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.5s ease;
+  transition: 0.3s;
+  width: 100%;
+}
+
+/* Estilos para a seção "Quem somos" */
+#quem-somos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  height: 50vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#quem-somos h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.quem-somos__container {
+  display: flex;
+  flex-direction: row;
+  /* Inverte a ordem dos elementos */
+  align-items: center;
+  justify-content: space-between;
+  text-align: justify;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  /* Centraliza o container */
+}
+
+.quem-somos__content {
+  flex: 1;
+  padding-right: 0px;
+  /* Espaçamento à direita do texto */
+}
+
+.quem-somos__images {
+  display: flex;
+  justify-content: space-between;
+  /* As fotos ficam distribuídas ao longo do container */
+  flex-wrap: wrap;
+  /* Quebra as imagens para a próxima linha, se necessário */
+  gap: 20px;
+  /* Espaço entre as fotos */
+  flex: 1;
+  margin-left: 100px;
+}
+
+.quem-somos__images .photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  /* Tamanho fixo para as fotos */
+}
+
+.quem-somos__images img {
+  width: 100%;
+  height: 120px;
+  /* Ajuste a altura para todas as imagens */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quem-somos__images span {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.quem-somos__content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+  margin-left: -200px;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  #quem-somos {
+    padding: 20px;
+    /* Reduz o padding para uma tela menor */
+  }
+
+  .quem-somos__container {
+    flex-direction: column;
+    /* Organiza o conteúdo de forma vertical no mobile */
+    align-items: center;
+    /* Centraliza o conteúdo */
+    text-align: center;
+    /* Centraliza o texto */
+  }
+
+  .quem-somos__content {
+    margin-left: 0;
+    /* Remove o deslocamento à esquerda */
+    margin-right: 0;
+    /* Remove o deslocamento à direita */
+    padding: 0 20px;
+    /* Adiciona um pouco de padding para dar espaço nas laterais */
+    text-align: justify;
+  }
+
+  .quem-somos__images {
+    margin-left: 0;
+    /* Remove o margin-left */
+    justify-content: center;
+    /* Centraliza as imagens */
+  }
+
+  .quem-somos__images .photo {
+    width: 100px;
+    /* Ajusta o tamanho das fotos para o mobile */
+  }
+
+  .quem-somos__content p {
+    font-size: 1rem;
+    margin-left: 0;
+    /* Ajusta a margem do texto */
+    margin-right: 0;
+    /* Ajusta a margem do texto */
+    text-align: justify;
+  }
+
+  #formContainer {
+    margin-top: 600px;
+    padding: 20px;
+  }
+
+  #formContainer form {
+    width: 100%;
+  }
+
+  #formContainer button {
+    margin-left: 0px;
+  }
+
+  #footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .flow-container {
+    margin-top: 400px;
+  }
+
+  #formContainer {
+    margin-top: 800px;
+  }
+}
+
+#redirectToLogin {
+  display: flex;
+  /* Ativa o Flexbox */
+  flex-direction: column;
+  /* Organiza os itens em coluna */
+  justify-content: center;
+  /* Alinha o conteúdo verticalmente no centro */
+  align-items: center;
+  /* Alinha o conteúdo horizontalmente no centro */
+  text-align: center;
+  /* Garante que o texto fique centralizado */
+  height: 100vh;
+  /* Ocupa 100% da altura da tela */
+  margin-top: -300px;
+}
+
+
+/* Estilo do modal */
+.modal {
+  display: none;
+  /* Esconde o modal por padrão */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  /* Cor de fundo */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Transparente */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
