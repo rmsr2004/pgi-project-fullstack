@@ -28,7 +28,7 @@ This repository contains the source code for our website platform, which connect
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** PHP
-- **Database(https://github.com/rmsr2004/pgi-project-db):** MySQL
+- **[Database](https://github.com/rmsr2004/pgi-project-db):** MySQL
 - **Authentication & Security:** None
 - **Hosting:** College server
 
